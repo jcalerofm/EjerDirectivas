@@ -1,12 +1,12 @@
 <h1 style="text-align: center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">{{titulo}}</h1>
-
+<div class="container">
 <form>
   <label for="nombre">Usuario: </label>
   <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nombre"><br />
   <label for="password">Password: </label>
   <input type="text" placeholder="Password" name="password" [(ngModel)]="password"><br />
 
-  <button type="submit" (click)="registrarUsuario()">Registrar</button>
+  <button type="submit" (click)="registrarUsuario()" class="btn btn-primary">Registrar</button>
 </form><br/>
 
 <p *ngIf="registrado else sinRegistrar">{{mensaje}}</p>
@@ -16,3 +16,4 @@
 <br>
 
 <li *ngFor="let entrada of entradas; let i=index"> Entrada {{i + 1}} = {{entrada.titulo}}. </li>
+</div>
